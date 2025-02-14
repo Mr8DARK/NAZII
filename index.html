@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OSAMA WEEB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>WLC TO MY WEEB</h1>
+        <nav>
+            <ul>
+                <li><a href="#">GENERAL</a></li>
+                <li><a href="#about">WHO IM</a></li>
+                <li><a href="#contact">CONTACT ME</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero">
+        <h2>اكتشف عالم الإبداع</h2>
+        <p>مرحبًا بك في موقعنا، حيث نقدم لك كل ما تحتاجه بأجمل التصاميم.</p>
+        <button onclick="changeText()">اضغط هنا</button>
+        <p id="message">نص افتراضي.</p>
+        <p>رابط موقعك العشوائي: <span id="randomLink"></span></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 جميع الحقوق محفوظة</p>
+    </footer>
+    <script src="script.js"></script>
+    <script>
+        function generateRandomLink() {
+            const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
+            let randomStr = '';
+            for (let i = 0; i < 10; i++) {
+                randomStr += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            document.getElementById("randomLink").innerText = `https://mywebsite.com/${randomStr}`;
+        }
+        generateRandomLink();
+    </script>
+</body>
+</html>
